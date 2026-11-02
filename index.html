@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muzo Visuals — Photography</title>
+<meta name="description" content="Muzo Visuals — portraits, lifestyle and creative visuals. Photographer based in Wrocław, Poland.">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<!-- To switch to the light look, change class="dark" to class="light" on the next line -->
+<body class="dark">
+
+<header class="top">
+  <a href="#top" class="brand"><img src="logo-mark.png" alt="" class="brand__mark"><span>MUZO VISUALS</span></a>
+  <nav aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#about" class="hide-sm">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener" class="nav__ig">Instagram ↗</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="logo-mark.png" alt="" class="hero__mark" aria-hidden="true">
+    <p class="hero__eyebrow rise" style="--d:.05s">Portraits · Lifestyle · Creative visuals</p>
+    <h1 class="rise" style="--d:.2s">Moments, framed<br>as I see them.</h1>
+    <p class="hero__sub rise" style="--d:.4s">Wrocław, Poland · open for photoshoots and collaborations</p>
+    <a class="hero__cta rise" style="--d:.55s" href="#work">See the work ↓</a>
+  </section>
+
+  <section id="work" class="work">
+    <div class="gallery" id="gallery" aria-label="Photo gallery"></div>
+  </section>
+
+  <section id="about" class="about reveal-block">
+    <h2>About</h2>
+    <p>I'm Muzo, a photographer based in Wrocław. I shoot portraits, lifestyle and
+      creative visuals: real moments, city light and the people in them.</p>
+  </section>
+
+  <section id="contact" class="contact reveal-block">
+    <h2>Let's shoot</h2>
+    <p>Open for photoshoots and collaborations. The quickest way is a DM:</p>
+    <a class="mail" href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener">@muzovisuals ↗</a>
+    <p class="contact__alt">or by email: <a href="mailto:muzafferbener@icloud.com">muzafferbener@icloud.com</a></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Muzo Visuals</span>
+  <a href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener">Instagram ↗</a>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb__close" id="lbClose" aria-label="Close">×</button>
+  <button class="lb__nav lb__prev" id="lbPrev" aria-label="Previous photo">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb__nav lb__next" id="lbNext" aria-label="Next photo">›</button>
+</div>
+
+<script src="photos.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>
