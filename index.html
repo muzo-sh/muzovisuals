@@ -5,65 +5,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muzo Visuals — Photography</title>
 <meta name="description" content="Muzo Visuals — portraits, lifestyle and creative visuals. Photographer based in Wrocław, Poland.">
-<meta name="theme-color" content="#0E0E0E">
+<meta name="theme-color" content="#0B0C0E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<!-- exifr reads real binary EXIF metadata from uploaded original photos -->
+<script src="https://cdn.jsdelivr.net/npm/exifr/dist/lite.umd.js" defer></script>
 </head>
-<!-- To switch to the light look, change class="dark" to class="light" on the next line -->
 <body class="dark">
 
 <header class="top">
-  <a href="#top" class="brand"><img src="logo-mark.png" alt="" class="brand__mark"><span>MUZO VISUALS</span></a>
+  <a href="#top" class="brand">
+    <span class="brand__badge">
+      <img src="logo-mark.png" alt="Muzo Visuals emblem" class="brand__mark">
+    </span>
+    <span class="brand__text">MUZO <strong>VISUALS</strong></span>
+  </a>
   <nav aria-label="Main">
     <a href="#work">Work</a>
     <a href="#about" class="hide-sm">About</a>
     <a href="#contact">Contact</a>
+    <a href="https://muzo.sh" target="_blank" rel="noopener" class="hide-sm">muzo.sh ↗</a>
     <a href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener" class="nav__ig">Instagram ↗</a>
   </nav>
 </header>
 
-<main id="top">
-  <section class="hero">
-    <img src="logo-mark.png" alt="" class="hero__mark" aria-hidden="true">
-    <p class="hero__eyebrow rise" style="--d:.05s">Portraits · Lifestyle · Creative visuals</p>
-    <h1 class="rise" style="--d:.2s">Moments, framed<br>as I see them.</h1>
-    <p class="hero__sub rise" style="--d:.4s">Wrocław, Poland · open for photoshoots and collaborations</p>
-    <a class="hero__cta rise" style="--d:.55s" href="#work">See the work ↓</a>
+<main id="top" class="bento-wrap">
+
+  <!-- ============ HERO BENTO ============ -->
+  <section class="hero-bento">
+    <div class="hero-card hero-card--main" data-tilt>
+      <img src="logo-mark.png" alt="" class="hero__watermark" aria-hidden="true">
+      <p class="hero__eyebrow rise" style="--d:.05s">Portraits · Night Street · Creative Visuals</p>
+      <h1 class="rise" style="--d:.18s">Moments, framed<br>as I see them.</h1>
+      <p class="hero__sub rise" style="--d:.32s">Wrocław, Poland · open for photoshoots and collaborations</p>
+      <div class="hero__actions rise" style="--d:.45s">
+        <a class="btn-primary" href="#work">Explore Gallery ↓</a>
+        <a class="btn-ghost" href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener">@muzovisuals ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-card hero-card--logo" data-tilt>
+      <div class="emblem-stage">
+        <img src="logo-mark.png" alt="Muzo Visuals Logo" class="emblem-stage__img">
+      </div>
+      <div class="emblem-caption">
+        <span class="emblem-title">Muzo Visuals</span>
+        <span class="emblem-meta">RAW · 3:2 · Wrocław</span>
+      </div>
+    </div>
   </section>
 
+  <!-- ============ BENTO PHOTO GALLERY (NO FILENAMES, CLEAN) ============ -->
   <section id="work" class="work">
     <div class="gallery" id="gallery" aria-label="Photo gallery"></div>
   </section>
 
-  <section id="about" class="about reveal-block">
-    <h2>About</h2>
-    <p>I'm Muzo, a photographer based in Wrocław. I shoot portraits, lifestyle and
-      creative visuals: real moments, city light and the people in them.</p>
+  <!-- ============ ABOUT + CONTACT BENTO ============ -->
+  <section class="info-bento">
+    <div id="about" class="info-card reveal-block" data-tilt>
+      <h2>01 — About</h2>
+      <p>I'm Muzo, a photographer based in Wrocław. I shoot portraits, lifestyle and creative visuals: real moments, city light and the people in them.</p>
+    </div>
+
+    <div id="contact" class="info-card info-card--contact reveal-block" data-tilt>
+      <h2>02 — Let's shoot</h2>
+      <p>Open for photoshoots and collaborations in Wrocław and beyond. The quickest way is a DM:</p>
+      <a class="mail" href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener">@muzovisuals ↗</a>
+      <p class="contact__alt">or by email: <a href="mailto:muzafferbener@icloud.com">muzafferbener@icloud.com</a></p>
+    </div>
   </section>
 
-  <section id="contact" class="contact reveal-block">
-    <h2>Let's shoot</h2>
-    <p>Open for photoshoots and collaborations. The quickest way is a DM:</p>
-    <a class="mail" href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener">@muzovisuals ↗</a>
-    <p class="contact__alt">or by email: <a href="mailto:muzafferbener@icloud.com">muzafferbener@icloud.com</a></p>
-  </section>
 </main>
 
-<footer class="footer">
-  <span>© <span id="year"></span> Muzo Visuals</span>
-  <a href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener">Instagram ↗</a>
+<footer class="footer bento-wrap">
+  <span>© <span id="year"></span> Muzo Visuals · Wrocław, Poland</span>
+  <div class="footer__links">
+    <a href="https://muzo.sh" target="_blank" rel="noopener">muzo.sh ↗</a>
+    <a href="https://www.instagram.com/muzovisuals/" target="_blank" rel="noopener">Instagram ↗</a>
+  </div>
 </footer>
 
+<!-- ============ FULL-RESOLUTION ZOOM LIGHTBOX + BOTTOM-RIGHT EXIF HUD ============ -->
 <div class="lightbox" id="lightbox" hidden>
-  <button class="lb__close" id="lbClose" aria-label="Close">×</button>
-  <button class="lb__nav lb__prev" id="lbPrev" aria-label="Previous photo">‹</button>
-  <img id="lbImg" alt="">
-  <button class="lb__nav lb__next" id="lbNext" aria-label="Next photo">›</button>
+  <div class="lb__topbar">
+    <span class="lb__counter" id="lbCounter">1 / 11</span>
+    <div class="lb__controls">
+      <button type="button" class="lb__ctrl-btn" id="lbZoomToggle" aria-label="Toggle Zoom">100%</button>
+      <button type="button" class="lb__close" id="lbClose" aria-label="Close">×</button>
+    </div>
+  </div>
+
+  <button type="button" class="lb__nav lb__prev" id="lbPrev" aria-label="Previous photo">‹</button>
+
+  <div class="lb__stage" id="lbStage">
+    <img id="lbImg" alt="" draggable="false">
+  </div>
+
+  <button type="button" class="lb__nav lb__next" id="lbNext" aria-label="Next photo">›</button>
+
+  <!-- Bottom-Right Metadata HUD (Appears ONLY when photo is clicked) -->
+  <aside class="lb__hud" id="lbHud" aria-live="polite">
+    <div class="hud__row">
+      <span class="hud__camera" id="hudCamera">Loading EXIF…</span>
+      <span class="hud__res" id="hudRes"></span>
+    </div>
+    <div class="hud__specs" id="hudSpecs"></div>
+  </aside>
 </div>
 
 <script src="photos.js"></script>

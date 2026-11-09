@@ -1,7 +1,6 @@
-// YOUR PHOTOS: one line per photo, in the order you want them shown.
-// Files live in the "images" folder. "alt" is a short description (accessibility + search).
-// To add a photo: copy it into images/, then add a line here.
-// To remove one: delete its line. To reorder: move the lines.
+// Default photo order for Muzo Visuals.
+// Note: Any new photo uploaded directly to the "images/" folder on GitHub (muzo-sh/muzovisuals)
+// is automatically discovered and displayed by gallery.js even if you don't edit this file!
 window.PHOTOS = [
   { src: "images/07.jpg", alt: "University building and stone bridge in golden evening light, Wrocław" },
   { src: "images/01.jpg", alt: "Couple embracing on a city bridge at night, holding a red rose" },
